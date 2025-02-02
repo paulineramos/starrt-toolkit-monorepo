@@ -1,0 +1,14 @@
+services:
+  client:
+    build: ./packages/client
+    container_name: starrt_client
+    ports:
+      - '8080:8080'
+    environment:
+      - NODE_ENV=docker
+
+  server:
+    build: ./packages/server
+    container_name: starrt_server
+    ports:
+      - '3000:3000'
